@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>時間差の表示</title>
+    <title>告白までの残り時間</title>
     <style>
         body {
             font-family: "BIZ UD Gothic", "UD Digi Kyokasho NK-R", "Meiryo UI", sans-serif;
@@ -46,9 +46,9 @@
         const diffMs = Math.abs(now - targetDate); 
         const titleElement = document.getElementById('timer-title');
         if (now < targetDate) {
-            titleElement.textContent = "2026年6月29日 16:10 までの残り時間";
+            titleElement.textContent = "告白までの残り時間";
         } else {
-            titleElement.textContent = "2026年6月29日 16:10 からの経過時間";
+            titleElement.textContent = "告白からの経過時間";
         }
         const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
         const diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
